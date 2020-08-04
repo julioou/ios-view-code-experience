@@ -9,12 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    lazy var wallet: WalletView = {
+       let view = WalletView()
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        wallet.show()       
     }
-
-
 }
 
