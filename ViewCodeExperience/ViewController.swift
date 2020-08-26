@@ -1,10 +1,11 @@
 //
-//  ViewController.swift
-//  ViewCodeExperience
-//
-//  Created by Julio Cesar on 03/08/20.
-//  Copyright © 2020 Julio Cesar. All rights reserved.
-//
+// +-----------------------------------------------------+
+// |                                                     |
+// |   Follow me on                                      |
+// |       https://www.linkedin.com/in/julio-assis       |
+// |       https://github.com/julioou                    |
+// |                                                     |
+// +-----------------------------------------------------+
 
 import UIKit
 
@@ -17,7 +18,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        wallet.show()       
+        DispatchQueue.main.async {
+            self.wallet.show()
+            self.view.addSubview(self.wallet)
+        }
     }
 }
 

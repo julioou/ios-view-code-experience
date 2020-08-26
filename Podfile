@@ -1,10 +1,23 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '12.4'
+
+# Pods for ViewCodeExperience
+def core
+  pod 'SnapKit'
+  pod 'Colours'
+  pod 'ChameleonFramework/Swift', :git => 'https://github.com/wowansm/Chameleon', :branch => 'swift5'
+  pod 'Swiftlint'
+end
 
 target 'ViewCodeExperience' do
-  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+  core
+end
 
-  # Pods for ViewCodeExperience
-  pod 'SnapKit'
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['CLANG_WARN_DOCUMENTATION_COMMENTS'] = 'NO'
+        end
+    end
 end

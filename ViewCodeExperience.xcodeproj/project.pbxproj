@@ -13,6 +13,11 @@
 		5A15A07F24D8E54C00B5699B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A15A07E24D8E54C00B5699B /* Assets.xcassets */; };
 		5A15A08224D8E54C00B5699B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A15A08024D8E54C00B5699B /* LaunchScreen.storyboard */; };
 		5A529AE624D8E74800445839 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A529AE524D8E74800445839 /* WalletView.swift */; };
+		5AF4C5F924F503FE0086966A /* ViewCodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4C5F824F503FE0086966A /* ViewCodeProtocol.swift */; };
+		5AF4C5FB24F5046D0086966A /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4C5FA24F5046D0086966A /* UIView+.swift */; };
+		5AF4C60124F5094C0086966A /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4C60024F5094C0086966A /* WalletViewModel.swift */; };
+		5AF4C60324F50ACE0086966A /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4C60224F50ACE0086966A /* WalletModel.swift */; };
+		5AF4C61924F51E020086966A /* notification_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AF4C61824F51E020086966A /* notification_icon.png */; };
 		5E9A43FCBD1C17DC71438378 /* Pods_ViewCodeExperience.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB32474093A51A298340ACE /* Pods_ViewCodeExperience.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +30,12 @@
 		5A15A08124D8E54C00B5699B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A15A08324D8E54C00B5699B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A529AE524D8E74800445839 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
+		5A529E6C24D9866B004ACB80 /* ViewCodeExperience-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewCodeExperience-Bridging-Header.h"; sourceTree = "<group>"; };
+		5AF4C5F824F503FE0086966A /* ViewCodeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeProtocol.swift; sourceTree = "<group>"; };
+		5AF4C5FA24F5046D0086966A /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		5AF4C60024F5094C0086966A /* WalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
+		5AF4C60224F50ACE0086966A /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
+		5AF4C61824F51E020086966A /* notification_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notification_icon.png; sourceTree = "<group>"; };
 		8D6E715046DF5BF04CDA4B5A /* Pods-ViewCodeExperience.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewCodeExperience.release.xcconfig"; path = "Target Support Files/Pods-ViewCodeExperience/Pods-ViewCodeExperience.release.xcconfig"; sourceTree = "<group>"; };
 		9502DBC255CC0C992E7941D5 /* Pods-ViewCodeExperience.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewCodeExperience.debug.xcconfig"; path = "Target Support Files/Pods-ViewCodeExperience/Pods-ViewCodeExperience.debug.xcconfig"; sourceTree = "<group>"; };
 		FEB32474093A51A298340ACE /* Pods_ViewCodeExperience.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViewCodeExperience.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,23 +74,69 @@
 		5A15A07624D8E54800B5699B /* ViewCodeExperience */ = {
 			isa = PBXGroup;
 			children = (
-				5A529AE424D8E71700445839 /* View */,
+				5AF4C5F724F5033F0086966A /* Common */,
+				5A529AE424D8E71700445839 /* Scenes */,
 				5A15A07724D8E54800B5699B /* AppDelegate.swift */,
 				5A15A07924D8E54800B5699B /* ViewController.swift */,
 				5A15A07B24D8E54800B5699B /* Main.storyboard */,
 				5A15A07E24D8E54C00B5699B /* Assets.xcassets */,
 				5A15A08024D8E54C00B5699B /* LaunchScreen.storyboard */,
 				5A15A08324D8E54C00B5699B /* Info.plist */,
+				5A529E6C24D9866B004ACB80 /* ViewCodeExperience-Bridging-Header.h */,
+				5AF4C61A24F51E0E0086966A /* Resources */,
 			);
 			path = ViewCodeExperience;
 			sourceTree = "<group>";
 		};
-		5A529AE424D8E71700445839 /* View */ = {
+		5A529AE424D8E71700445839 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5AF4C5F624F502820086966A /* Wallet */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		5AF4C5F624F502820086966A /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
 				5A529AE524D8E74800445839 /* WalletView.swift */,
+				5AF4C60024F5094C0086966A /* WalletViewModel.swift */,
+				5AF4C60224F50ACE0086966A /* WalletModel.swift */,
 			);
-			path = View;
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		5AF4C5F724F5033F0086966A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5AF4C61724F51CD80086966A /* Protocols */,
+				5AF4C61624F51CC40086966A /* Utils */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5AF4C61624F51CC40086966A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5AF4C5FA24F5046D0086966A /* UIView+.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5AF4C61724F51CD80086966A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5AF4C5F824F503FE0086966A /* ViewCodeProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5AF4C61A24F51E0E0086966A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5AF4C61824F51E020086966A /* notification_icon.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		B52C7A9271A3FD74CFEFD754 /* Frameworks */ = {
@@ -162,6 +219,7 @@
 				5A15A08224D8E54C00B5699B /* LaunchScreen.storyboard in Resources */,
 				5A15A07F24D8E54C00B5699B /* Assets.xcassets in Resources */,
 				5A15A07D24D8E54800B5699B /* Main.storyboard in Resources */,
+				5AF4C61924F51E020086966A /* notification_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,8 +273,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A15A07A24D8E54800B5699B /* ViewController.swift in Sources */,
+				5AF4C60324F50ACE0086966A /* WalletModel.swift in Sources */,
+				5AF4C5F924F503FE0086966A /* ViewCodeProtocol.swift in Sources */,
 				5A15A07824D8E54800B5699B /* AppDelegate.swift in Sources */,
+				5AF4C60124F5094C0086966A /* WalletViewModel.swift in Sources */,
 				5A529AE624D8E74800445839 /* WalletView.swift in Sources */,
+				5AF4C5FB24F5046D0086966A /* UIView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +433,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.myself.ViewCodeExperience;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/$(SWIFT_MODULE_NAME)-Bridging-Header.h";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -389,6 +453,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.myself.ViewCodeExperience;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/$(SWIFT_MODULE_NAME)-Bridging-Header.h";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
