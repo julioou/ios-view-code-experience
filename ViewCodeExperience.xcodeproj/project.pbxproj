@@ -20,6 +20,7 @@
 		5AF4C61924F51E020086966A /* notification_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AF4C61824F51E020086966A /* notification_icon.png */; };
 		5AF4C62024F674FC0086966A /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 5AF4C61F24F674FC0086966A /* .swiftlint.yml */; };
 		5AF4C62224F67D660086966A /* NavigationBar+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4C62124F67D660086966A /* NavigationBar+.swift */; };
+		5AF4C62524F7B0D90086966A /* FeatureBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4C62424F7B0D90086966A /* FeatureBaseView.swift */; };
 		5E9A43FCBD1C17DC71438378 /* Pods_ViewCodeExperience.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB32474093A51A298340ACE /* Pods_ViewCodeExperience.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		5AF4C61824F51E020086966A /* notification_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notification_icon.png; sourceTree = "<group>"; };
 		5AF4C61F24F674FC0086966A /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		5AF4C62124F67D660086966A /* NavigationBar+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationBar+.swift"; sourceTree = "<group>"; };
+		5AF4C62424F7B0D90086966A /* FeatureBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureBaseView.swift; sourceTree = "<group>"; };
 		8D6E715046DF5BF04CDA4B5A /* Pods-ViewCodeExperience.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewCodeExperience.release.xcconfig"; path = "Target Support Files/Pods-ViewCodeExperience/Pods-ViewCodeExperience.release.xcconfig"; sourceTree = "<group>"; };
 		9502DBC255CC0C992E7941D5 /* Pods-ViewCodeExperience.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewCodeExperience.debug.xcconfig"; path = "Target Support Files/Pods-ViewCodeExperience/Pods-ViewCodeExperience.debug.xcconfig"; sourceTree = "<group>"; };
 		FEB32474093A51A298340ACE /* Pods_ViewCodeExperience.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViewCodeExperience.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +116,7 @@
 		5AF4C5F724F5033F0086966A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5AF4C62324F7B0B50086966A /* Base View */,
 				5AF4C61724F51CD80086966A /* Protocols */,
 				5AF4C61624F51CC40086966A /* Utils */,
 			);
@@ -159,6 +162,14 @@
 				5AF4C61F24F674FC0086966A /* .swiftlint.yml */,
 			);
 			path = SwiftLint;
+			sourceTree = "<group>";
+		};
+		5AF4C62324F7B0B50086966A /* Base View */ = {
+			isa = PBXGroup;
+			children = (
+				5AF4C62424F7B0D90086966A /* FeatureBaseView.swift */,
+			);
+			path = "Base View";
 			sourceTree = "<group>";
 		};
 		B52C7A9271A3FD74CFEFD754 /* Frameworks */ = {
@@ -316,6 +327,7 @@
 			files = (
 				5A15A07A24D8E54800B5699B /* ViewController.swift in Sources */,
 				5AF4C60324F50ACE0086966A /* WalletModel.swift in Sources */,
+				5AF4C62524F7B0D90086966A /* FeatureBaseView.swift in Sources */,
 				5AF4C5F924F503FE0086966A /* ViewCodeProtocol.swift in Sources */,
 				5A15A07824D8E54800B5699B /* AppDelegate.swift in Sources */,
 				5AF4C60124F5094C0086966A /* WalletViewModel.swift in Sources */,
