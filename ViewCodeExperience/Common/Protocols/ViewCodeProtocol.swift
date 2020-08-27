@@ -21,7 +21,7 @@ extension ViewCodeProtocol {
 
     func setUp() {
         setHierarchy()
-        setStyle()
         setConstraints()
+        setStyle()
     }
 }

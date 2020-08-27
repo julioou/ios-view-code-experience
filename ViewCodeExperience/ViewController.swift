@@ -11,7 +11,8 @@ import UIKit
 
 class ViewController: UIViewController {
     lazy var wallet: WalletView = {
-       let view = WalletView()
+        let image = UIImage()
+        let view = WalletView(image: image)
         return view
     }()
 
