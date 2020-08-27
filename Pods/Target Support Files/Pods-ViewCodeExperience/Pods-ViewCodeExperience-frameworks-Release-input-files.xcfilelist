@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-ViewCodeExperience/Pods-ViewCodeExperience-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework
+${BUILT_PRODUCTS_DIR}/Colours/Colours.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
