@@ -6,7 +6,7 @@ def core
   pod 'SnapKit'
   pod 'Colours'
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/wowansm/Chameleon', :branch => 'swift5'
-  pod 'Swiftlint'
+  pod 'SwiftLint'
 end
 
 target 'ViewCodeExperience' do

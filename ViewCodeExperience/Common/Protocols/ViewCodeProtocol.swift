@@ -7,7 +7,6 @@
 // |                                                     |
 // +-----------------------------------------------------+
 
-
 import Foundation
 
 protocol ViewCodeProtocol {
@@ -15,14 +14,14 @@ protocol ViewCodeProtocol {
     func setHierarchy()
     func setUp()
     func setStyle()
-    func setContraints()
+    func setConstraints()
 }
 
 extension ViewCodeProtocol {
-    
+
     func setUp() {
         setHierarchy()
         setStyle()
-        setContraints()
+        setConstraints()
     }
 }

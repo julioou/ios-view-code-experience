@@ -14,7 +14,7 @@ class ViewController: UIViewController {
        let view = WalletView()
         return view
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -24,4 +24,3 @@ class ViewController: UIViewController {
         }
     }
 }
-

@@ -18,6 +18,8 @@
 		5AF4C60124F5094C0086966A /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4C60024F5094C0086966A /* WalletViewModel.swift */; };
 		5AF4C60324F50ACE0086966A /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4C60224F50ACE0086966A /* WalletModel.swift */; };
 		5AF4C61924F51E020086966A /* notification_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AF4C61824F51E020086966A /* notification_icon.png */; };
+		5AF4C62024F674FC0086966A /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 5AF4C61F24F674FC0086966A /* .swiftlint.yml */; };
+		5AF4C62224F67D660086966A /* NavigationBar+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4C62124F67D660086966A /* NavigationBar+.swift */; };
 		5E9A43FCBD1C17DC71438378 /* Pods_ViewCodeExperience.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB32474093A51A298340ACE /* Pods_ViewCodeExperience.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +38,8 @@
 		5AF4C60024F5094C0086966A /* WalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
 		5AF4C60224F50ACE0086966A /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
 		5AF4C61824F51E020086966A /* notification_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notification_icon.png; sourceTree = "<group>"; };
+		5AF4C61F24F674FC0086966A /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
+		5AF4C62124F67D660086966A /* NavigationBar+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationBar+.swift"; sourceTree = "<group>"; };
 		8D6E715046DF5BF04CDA4B5A /* Pods-ViewCodeExperience.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewCodeExperience.release.xcconfig"; path = "Target Support Files/Pods-ViewCodeExperience/Pods-ViewCodeExperience.release.xcconfig"; sourceTree = "<group>"; };
 		9502DBC255CC0C992E7941D5 /* Pods-ViewCodeExperience.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewCodeExperience.debug.xcconfig"; path = "Target Support Files/Pods-ViewCodeExperience/Pods-ViewCodeExperience.debug.xcconfig"; sourceTree = "<group>"; };
 		FEB32474093A51A298340ACE /* Pods_ViewCodeExperience.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViewCodeExperience.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +78,7 @@
 		5A15A07624D8E54800B5699B /* ViewCodeExperience */ = {
 			isa = PBXGroup;
 			children = (
+				5AF4C61D24F674D60086966A /* SupportFiles */,
 				5AF4C5F724F5033F0086966A /* Common */,
 				5A529AE424D8E71700445839 /* Scenes */,
 				5A15A07724D8E54800B5699B /* AppDelegate.swift */,
@@ -119,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				5AF4C5FA24F5046D0086966A /* UIView+.swift */,
+				5AF4C62124F67D660086966A /* NavigationBar+.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -137,6 +143,22 @@
 				5AF4C61824F51E020086966A /* notification_icon.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		5AF4C61D24F674D60086966A /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				5AF4C61E24F674E80086966A /* SwiftLint */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		5AF4C61E24F674E80086966A /* SwiftLint */ = {
+			isa = PBXGroup;
+			children = (
+				5AF4C61F24F674FC0086966A /* .swiftlint.yml */,
+			);
+			path = SwiftLint;
 			sourceTree = "<group>";
 		};
 		B52C7A9271A3FD74CFEFD754 /* Frameworks */ = {
@@ -168,6 +190,7 @@
 				5A15A07124D8E54800B5699B /* Frameworks */,
 				5A15A07224D8E54800B5699B /* Resources */,
 				A8E500213E68F0E0DADA4B2D /* [CP] Embed Pods Frameworks */,
+				5AF4C61B24F656BA0086966A /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -216,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AF4C62024F674FC0086966A /* .swiftlint.yml in Resources */,
 				5A15A08224D8E54C00B5699B /* LaunchScreen.storyboard in Resources */,
 				5A15A07F24D8E54C00B5699B /* Assets.xcassets in Resources */,
 				5A15A07D24D8E54800B5699B /* Main.storyboard in Resources */,
@@ -248,6 +272,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5AF4C61B24F656BA0086966A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#if which swiftlint >/dev/null; then\n    swiftlint\n#else\n #   echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n#fi\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		A8E500213E68F0E0DADA4B2D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -279,6 +321,7 @@
 				5AF4C60124F5094C0086966A /* WalletViewModel.swift in Sources */,
 				5A529AE624D8E74800445839 /* WalletView.swift in Sources */,
 				5AF4C5FB24F5046D0086966A /* UIView+.swift in Sources */,
+				5AF4C62224F67D660086966A /* NavigationBar+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
